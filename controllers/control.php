@@ -106,12 +106,7 @@ class Control
 
         $v = '';
         if (!empty($toc)) {
-            $v .= '<div class="f13-toc">';
-                $v .= '<strong>'.__('Table of contents', 'f13-toc').'</strong>';
-                $v .= $this->_generate_list($toc);
-            $v .= '</div>';
-
-            $v = '<details class="f13-toc">';
+            $v .= '<details class="f13-toc"role="navigation" aria-label="Navigate to sections of this page">';
                 $v .= '<summary>'.__('Table of contents', 'f13-toc').'</summary>';
                 $v .= $this->_generate_list($toc);
             $v .= '</details>';
