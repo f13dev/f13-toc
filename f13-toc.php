@@ -12,7 +12,7 @@ Text Domain: f13-toc
 namespace F13\TOC;
 
 if (!function_exists('get_plugins')) require_once(ABSPATH.'wp-admin/includes/plugin.php');
-if (!defined('F13_TOC_VERSION')) define('F13_TOC_VERSION', get_plugin_data(__FILE__, false, false));
+if (!defined('F13_TOC')) define('F13_TOC', get_plugin_data(__FILE__, false, false));
 if (!defined('F13_TOC_PATH')) define('F13_TOC_PATH', plugin_dir_path( __FILE__ ));
 if (!defined('F13_TOC_URL')) define('F13_TOC_URL', plugin_dir_url(__FILE__));
 
@@ -45,7 +45,7 @@ class Plugin
 
     public function enqueue()
     {
-        wp_enqueue_style('f13-toc', F13_TOC_URL.'css/f13-toc.css', array(), F13_TOC_VERSION['version']);
+        wp_enqueue_style('f13-toc', F13_TOC_URL.'css/f13-toc.css', array(), F13_TOC['Version']);
     }
 }
 

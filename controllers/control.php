@@ -9,8 +9,8 @@ class Control
 
     public function _generate_list($toc, $v = '')
     {
+        $parent = false;
         foreach ($toc as $key => $item) {
-            $parent = false;
             if (array_key_exists('title', $item)) {
                 $v .= '<li><a href="#'.$item['anchor'].'">'.$item['title'].'</a>';
                     if (array_key_exists('children', $item)) {
@@ -35,6 +35,9 @@ class Control
     public function find_and_replace($content)
     {
         if (is_category()) {
+            return $content;
+        }
+        if (strpos($content, '<!-- no-f13-toc -->') !== false) {
             return $content;
         }
         $count = 1;
