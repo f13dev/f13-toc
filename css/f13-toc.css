@@ -1,6 +1,7 @@
 .f13-toc { background: #f7f7f7; border: 1px solid #ccc; padding: 0px; border-radius: 10px; }
 .f13-toc summary { cursor: pointer; font-weight: bold; padding: 10px 20px; }
 .f13-toc summary:after { content: '\021B4'; right: 35px; position: absolute; }
+.f13-toc[open] summary:after { content: '\021B5'; }
 .f13-toc > ol { padding-left: 50px; }
 .f13-toc ol ol, .f13-toc ol ol ol ol ol { list-style: lower-alpha; }
 .f13-toc ol ol ol, .f13-toc ol ol ol ol ol ol { list-style: upper-roman; }
