@@ -63,16 +63,17 @@ class Control
                             $id = $tag[1];
                         } else {
                             // Generate an ID from the header stack
-                            $id = 'f13-toc';
+                            $id = 'f13-toc-header';
                             for ($j = 1; $j <= $i; $j++) {
                                 $var = 'h'.$j.'_count';
                                 $id .= '-'.$$var;
                             }
-                            // Replace h tag to include new ID
-                            $content = str_replace(
-                                $htag,
+                            // Replace first instance of h tag to include new ID
+                            $content = preg_replace(
+                                '/'.$htag.'/',
                                 '<h'.$i.' id="'.$id.'" '.$ht[1][$h].'>'.$ht[2][$h].'<',
-                                $content
+                                $content,
+                                1
                             );
                         }
                         // Build an array of h tags for generating TOC
