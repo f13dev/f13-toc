@@ -1,4 +1,4 @@
-.f13-toc { background: #f7f7f7; border: 1px solid #ccc; padding: 0px; }
+.f13-toc { background: #f6f6f6; border: 1px solid #ccc; padding: 0px; }
 .f13-toc summary { cursor: pointer; font-weight: bold; padding: 10px 20px; }
 .f13-toc summary:after { content: '\021B4'; right: 35px; position: absolute; }
 .f13-toc[open] summary:after { content: '\021B5'; }
